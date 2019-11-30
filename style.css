@@ -1,0 +1,25 @@
+.blink-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    border-radius: 100%;
+    width: 150px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px #ffcc70;
+    }
+    75% {
+        box-shadow: 0 0 0 0px #c850c0;
+    }
+    100% {
+        box-shadow: 0 0 0 30px white;
+    }
+}
+
+.blink-bottom-button {
+    display: none;
+}
