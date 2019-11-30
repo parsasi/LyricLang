@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lyrics</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="server.css" />
+    <title>Music App</title>
 </head>
-<body>
+
+<body class="body-element">
+    <header class="page-header">
+        <h1 class="h1-element">Music App</h1>
+    </header>
+
     <main>
-        <form id="search-bar">
-            <input type="text" placeholder="search a song!" name ="search">
-        </form>
-        <button> play button</button>
-        <img id="homepageImage" alt="home image" src= "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"> 
+        <article class="main-container">
+            <figure class="click">
+                <p class="instructions">Play a Random Song</p>
+            </figure>
+            <div>
+                <form id="searchform">
+                    <input type="text" placeholder="search a song!" id="search-bar">
+                </form>
+                <form class="form" action="/upload" enctype="multipart/form-data" method="post">
+                    <label class="blink-top-button">
+              <input
+                class="blink-bottom-button"
+                type="file"
+                name="upload"
+                multiple="multiple"
+              /><br />
+            </label>
+                </form>
+            </div>
+        </article>
     </main>
-    
+
+    <!--<footer class="page-footer">
+        <div class="element">
+            
+        </div>
+    </footer>-->
 </body>
+
 </html>
