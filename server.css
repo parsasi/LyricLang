@@ -68,11 +68,16 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 100px;
     margin-top: 230px;
     border-radius: 100%;
-    width: 50px;
-    animation: pulse 1s infinite;
+    width: 100px;
+    animation: flash 1s infinite;
+    background-color: #fa4a4a;
+    margin:260px auto 0 auto;
+    text-align:center;
+    font-size:30px;
+    cursor: pointer;
 }
 
 @keyframes pulse {
@@ -86,23 +91,12 @@ p {
         box-shadow: 0 0 0 30px rgb(255, 0, 0);
     }
 }
-
-.blink-bottom-button {
-    display: none;
+@keyframes flash {
+    50% {
+        opacity: 0.75;
+    }
 }
 
-.input-button {
-    display: flex;
-    align-items: center;
-    margin-left: 150px;
-    border-radius: 8px;
-    border: none;
-    font-size: 40px;
-    padding: 14px 20px;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-}
 
 .click {
     display: flex;
