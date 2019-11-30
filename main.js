@@ -21,6 +21,7 @@ let songs = [{
 selectRandomSongs = () => {
     min = Math.ceil(0);
     max = Math.floor(songs.length -1);
-    return Math.floor(Math.random() * (max - min + 1)) + min; 
+    return songs[Math.floor(Math.random() * (max - min + 1)) + min]; 
 }
 
+console.log(selectRandomSongs());
