@@ -402,3 +402,11 @@ selectRandomSongs = () => {
     max = Math.floor(songs.length -1);
     return songs[Math.floor(Math.random() * (max - min + 1)) + min]; 
 }
+
+document.querySelector('.blink-top-button').addEventListener('click' , (e) => {
+    alert();
+    let randomSong = selectRandomSongs();
+    let audio = document.querySelector('audio');
+    let source = document.querySelector('source');
+    source.setAttribute('src' , randomSong.address);
+});
