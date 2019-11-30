@@ -160,3 +160,13 @@ p {
 
 
 }
+
+
+.ogLang {
+    overflow: scroll;
+}
+
+.translatedLang {
+    overflow:scroll;
+
+}
