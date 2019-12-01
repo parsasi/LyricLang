@@ -78,8 +78,8 @@
          
             <div class="all-lyric-divs">
 
-            <div class="ogLang">
-                <p class="lyrics"> 
+            <div class="ogLang container">
+                <p class="lyrics slider">
                     Hello What is Lorem Ipsum?
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     
@@ -92,9 +92,9 @@
             </div>
 
 
-            <div class="translatedLang">
+            <div class="translatedLang container">
 
-                <p class="lyrics">
+                <p class="lyrics slider">
                         What is Lorem Ipsum?
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         
@@ -124,7 +124,7 @@
         
             
 
-            <audio id="music-player" controls autoplay>
+            <audio id="music-player" controls >
                     
                     <source  type="audio/mpeg">
                   Your browser does not support the audio element.
@@ -135,6 +135,68 @@
             </footer>
     </div>
     <script src="main.js"></script>
+   <script>
+       let duration;
+       setTimeout(() => {
+           let time = document.querySelector('audio');
+           duration = Math.round(time.duration) + 's';
+           document.querySelector('body').innerHTML += `
+        <style>
+            .container {
+
+                margin: 2em auto;
+                overflow: hidden;
+                background: #ffffff;
+                position: relative;
+            }
+
+            .slider {
+                    position: relative;
+                box-sizing: border-box;
+                animation: slider ${duration} linear infinite;
+                list-style-type: none;
+                text-align: center;
+            }
+            @keyframes slider {
+                0%   { top:   55vh }
+                100% { top: -30vh }
+            }
+    </style>`;
+           document.querySelector('audio').setAttribute('autoplay' , 'autoplay');
+       },3000);
+       let resetScroll = (duration) => {
+           setTimeout(() => {
+               let time = document.querySelector('audio');
+               duration = Math.round(time.duration) + 's';
+               document.querySelector('body').innerHTML += `
+        <style>
+            .container {
+
+                margin: 2em auto;
+                overflow: hidden;
+                background: #ffffff;
+                position: relative;
+            }
+
+            .slider {
+                    position: relative;
+                box-sizing: border-box;
+                animation: slider ${duration} linear infinite;
+                list-style-type: none;
+                text-align: center;
+            }
+            @keyframes slider {
+                0%   { top:   55vh }
+                100% { top: -30vh }
+            }
+    </style>`;
+               document.querySelector('audio').setAttribute('autoplay' , 'autoplay');
+           },3000);
+       }
+
+       document.querySelector('.blink-top-button').addEventListener('click', playSong);
+       document.querySelector('.blink-footer-button').addEventListener('click', playSong);
+   </script>
 </body>
 
 </html>

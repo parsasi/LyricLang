@@ -112,7 +112,7 @@ audio{
     height:50px;
     position:absolute;
     right:40px;
-    bottom:25px;
+    bottom:11px;
 
 }
 @keyframes pulse {
@@ -220,7 +220,10 @@ audio{
     background-color: white;
     border-radius: 10px;
 }
-
+.slider{
+    position: relative;
+    top:55vh;
+}
 .lyrics{
     font-size: 20px;
     padding: 15px;

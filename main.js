@@ -397,7 +397,6 @@ let songs = [{
 \n我每天都屎，我每天晚上都屎`
 }];
 const playSong = () => {
-
     let randomSong = selectRandomSongs();
     let audio = document.querySelector('audio');
     audio.setAttribute('src', randomSong.address);
@@ -418,6 +417,6 @@ selectRandomSongs = () => {
 };
 
 
-
-document.querySelector('.blink-top-button').addEventListener('click', playSong);
-document.querySelector('.blink-footer-button').addEventListener('click', playSong);
+//
+// document.querySelector('.blink-top-button').addEventListener('click', playSong);
+// document.querySelector('.blink-footer-button').addEventListener('click', playSong);
