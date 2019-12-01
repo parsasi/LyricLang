@@ -1,9 +1,8 @@
 let songs = [{
-    id : '1',
-    name : 'Yellow Submarine',
-    address : 'songs/song1.mp3',
-    eng : 
-`In the town where I was born
+    id: '1',
+    name: 'Yellow Submarine',
+    address: './songs/song1.mp3',
+    eng: `In the town where I was born
 Lived a man who sailed to sea
 And he told us of his life
 In the land of submarines
@@ -33,9 +32,8 @@ Yellow submarine, yellow submarine
 We all live in a yellow submarine
 Yellow submarine, yellow submarine
 We all live in a yellow submarine
-Yellow submarine, yellow submarine` , 
-    mand : 
-`在我出生的城镇
+Yellow submarine, yellow submarine`,
+    mand: `在我出生的城镇
 住过一个出海的人
 他告诉我们他的生活
 在潜艇之地
@@ -66,12 +64,11 @@ Yellow submarine, yellow submarine` ,
 黄潜艇黄潜艇
 我们都住在黄色潜水艇
 黄潜艇黄潜艇`
-} , {
-    id : '2',
-    name : 'Jingle Bells',
-    address : 'songs/song2.mp3',
-    eng : 
-`Dashing through the snow
+}, {
+    id: '2',
+    name: 'Jingle Bells',
+    address: './songs/song2.mp3',
+    eng: `Dashing through the snow
 In a one-horse open sleigh
 O'er the fields we go
 Laughing all the way
@@ -134,9 +131,8 @@ In a one-horse open sleigh, hey
 Jingle bells, jingle bells
 Jingle all the way
 Oh, what fun it is to ride
-In a one-horse open sleigh` , 
-    mand : 
-`在雪地里奔跑
+In a one-horse open sleigh`,
+    mand: `在雪地里奔跑
 在一匹开马的雪橇上
 我们去的田野
 一路大笑
@@ -200,12 +196,11 @@ In a one-horse open sleigh` ,
 一路叮当
 哦，骑车有什么乐趣
 在一匹开马的雪橇上`
-} ,{
-    id : '3',
-    name : 'Nights',
-    address : 'songs/song2.mp3',
-    eng : 
-`Round your city, round the clock
+}, {
+    id: '3',
+    name: 'Nights',
+    address: './songs/song2.mp3',
+    eng: `Round your city, round the clock
 Everybody needs you
 No, you can't make everybody equal
 Although you got beaucoup family
@@ -299,9 +294,8 @@ My every day shit, my every day shit
 My every night shit, my every day shit
 My every day shit, my every day shit
 My every day shit, my every night shit
-` , 
-    mand : 
-`昼夜不停地游览城市
+`,
+    mand: `昼夜不停地游览城市
 每个人都需要你
 不，你不能使所有人平等
 虽然你有美丽的家庭
@@ -399,14 +393,12 @@ Rollin'大麻，那是一个便宜的假期
 
 selectRandomSongs = () => {
     min = Math.ceil(0);
-    max = Math.floor(songs.length -1);
-    return songs[Math.floor(Math.random() * (max - min + 1)) + min]; 
+    max = Math.floor(songs.length - 1);
+    return songs[Math.floor(Math.random() * (max - min + 1)) + min];
 }
 
-document.querySelector('.blink-top-button').addEventListener('click' , (e) => {
-    alert();
+document.querySelector('.blink-top-button').addEventListener('click', (e) => {
     let randomSong = selectRandomSongs();
     let audio = document.querySelector('audio');
-    let source = document.querySelector('source');
-    source.setAttribute('src' , randomSong.address);
+    audio.setAttribute('src', randomSong.address);
 });
