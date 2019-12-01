@@ -10,6 +10,7 @@ body {
 
     background-size:100% 130%;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 h1 {
@@ -67,7 +68,8 @@ audio{
     flex-direction: column;
     /*background-image: url("https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");*/
     background-size: cover;
-    height: 730px;
+    padding-top:50px;
+    height: 100vh;
 
 }
 
@@ -84,7 +86,9 @@ audio{
     flex-direction: row;
     padding-top: 50px;
 }
-
+.button-container{
+    position:relative;
+}
 .blink-top-button {
     display: flex;
     align-items: center;
@@ -102,7 +106,14 @@ audio{
     font-size:30px;
     cursor: pointer;
 }
+.blink-footer-button{
+    width:50px;
+    height:50px;
+    position:absolute;
+    right:40px;
+    bottom:25px;
 
+}
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0px #ffd1d1;
@@ -154,7 +165,7 @@ audio{
     justify-content: center;
     background-color: white;
     opacity: 70%;
-    
+    padding:20px 0;
     bottom: 0px;
     height: 70px;
     width: 100%;
