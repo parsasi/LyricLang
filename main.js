@@ -417,6 +417,6 @@ selectRandomSongs = () => {
 };
 
 
-//
-// document.querySelector('.blink-top-button').addEventListener('click', playSong);
-// document.querySelector('.blink-footer-button').addEventListener('click', playSong);
+
+document.querySelector('.blink-top-button').addEventListener('click', playSong);
+document.querySelector('.blink-footer-button').addEventListener('click', playSong);
