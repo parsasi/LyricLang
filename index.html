@@ -140,35 +140,38 @@
        document.querySelector('audio').addEventListener('play' , () => {
            let time = document.querySelector('audio');
            duration = Math.round(time.duration) + 's';
-           document.querySelector('body').innerHTML += `
-        <style>
-            .container {
-
-                margin: 2em auto;
-                overflow: hidden;
-                background: #ffffff;
-                position: relative;
-            }
-
-            .slider {
-                top:55vh;
-                position: relative;
-                box-sizing: border-box;
-                animation: slider ${duration} linear infinite;
-                list-style-type: none;
-                text-align: center;
-            }
-            @keyframes slider {
-                0%   { top:   55vh }
-                100% { top: -400vh }
-            }
-    </style>`;
+    //        document.querySelector('body').innerHTML += `
+    //     <style>
+    //         .container {
+    //
+    //             margin: 2em auto;
+    //             overflow: hidden;
+    //             background: #ffffff;
+    //             position: relative;
+    //         }
+    //
+    //         .slider {
+    //             top:55vh;
+    //             position: relative;
+    //             box-sizing: border-box;
+    //             animation: slider ${duration} linear infinite;
+    //             list-style-type: none;
+    //             text-align: center;
+    //         }
+    //         @keyframes slider {
+           //             0%   { top:   55vh }
+           //             100% { top: -400vh }
+           //         }
+    // </style>`;
+           let slider = document.querySelectorAll('.slider');
+           slider[0].setAttribute('style' , `top : 55vh; position : relative ; box-sizing: border-box; animation: slider ${duration} linear infinite; list-style-type: none;text-align: center;`)
+           slider[1].setAttribute('style' , `top : 55vh; position : relative ; box-sizing: border-box; animation: slider ${duration} linear infinite; list-style-type: none;text-align: center;`)
 
            document.querySelector('.blink-top-button').addEventListener('click', playSong);
            document.querySelector('.blink-footer-button').addEventListener('click', playSong);
            document.querySelector('audio').addEventListener('pause' , () => {
-               document.querySelectorAll('.slider')[0].setAttribute('style' , 'animation-play-state: paused;');
-               document.querySelectorAll('.slider')[1].setAttribute('style' , 'animation-play-state: paused;');
+               slider[0].setAttribute('style' , 'animation-play-state: paused;');
+               slider[1].setAttribute('style' , 'animation-play-state: paused;');
            });
        });
 
