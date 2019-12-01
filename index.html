@@ -124,7 +124,7 @@
         
             
 
-            <audio id="music-player" controls >
+            <audio id="music-player" autoplay controls >
                     
                     <source  type="audio/mpeg">
                   Your browser does not support the audio element.
@@ -137,7 +137,7 @@
     <script src="main.js"></script>
    <script>
        let duration;
-       setTimeout(() => {
+       document.querySelector('audio').addEventListener('play' , () => {
            let time = document.querySelector('audio');
            duration = Math.round(time.duration) + 's';
            document.querySelector('body').innerHTML += `
@@ -162,37 +162,7 @@
                 100% { top: -30vh }
             }
     </style>`;
-           document.querySelector('audio').setAttribute('autoplay' , 'autoplay');
-       },3000);
-       let resetScroll = (duration) => {
-           setTimeout(() => {
-               let time = document.querySelector('audio');
-               duration = Math.round(time.duration) + 's';
-               document.querySelector('body').innerHTML += `
-        <style>
-            .container {
-
-                margin: 2em auto;
-                overflow: hidden;
-                background: #ffffff;
-                position: relative;
-            }
-
-            .slider {
-                    position: relative;
-                box-sizing: border-box;
-                animation: slider ${duration} linear infinite;
-                list-style-type: none;
-                text-align: center;
-            }
-            @keyframes slider {
-                0%   { top:   55vh }
-                100% { top: -30vh }
-            }
-    </style>`;
-               document.querySelector('audio').setAttribute('autoplay' , 'autoplay');
-           },3000);
-       }
+       });
 
        document.querySelector('.blink-top-button').addEventListener('click', playSong);
        document.querySelector('.blink-footer-button').addEventListener('click', playSong);
