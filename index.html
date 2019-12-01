@@ -151,7 +151,8 @@
             }
 
             .slider {
-                    position: relative;
+                top:55vh;
+                position: relative;
                 box-sizing: border-box;
                 animation: slider ${duration} linear infinite;
                 list-style-type: none;
@@ -165,7 +166,12 @@
 
            document.querySelector('.blink-top-button').addEventListener('click', playSong);
            document.querySelector('.blink-footer-button').addEventListener('click', playSong);
+           document.querySelector('audio').addEventListener('pause' , () => {
+               document.querySelectorAll('.slider')[0].setAttribute('style' , 'animation-play-state: paused;');
+               document.querySelectorAll('.slider')[1].setAttribute('style' , 'animation-play-state: paused;');
+           });
        });
+
    </script>
 </body>
 
