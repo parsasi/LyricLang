@@ -13,8 +13,10 @@ body {
 
 h1 {
     color: black;
-    font-size: 60px;
+    font-size: 80px;
     font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    margin: 0;
 
 }
 
@@ -45,12 +47,26 @@ p {
     font-size: 100px;
 }
 
+audio{
+    width: 800px;
+
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
     background-image: url("https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
     background-size: cover;
-    height: 784px;
+    height: 730px;
+
+}
+
+.second-container {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+    background-size: cover;
+    height: 730px;
 
 }
 
@@ -76,9 +92,11 @@ p {
     margin-top: 230px;
     border-radius: 100%;
     width: 100px;
-    animation: flash 1s infinite;
-    background-color: #fa4a4a;
-    margin:260px auto 0 auto;
+    animation: flash 0.5s infinite;
+    background-color: #FEE140;
+    background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+    opacity: 80%;
+    margin:100px auto 0 auto;
     text-align:center;
     font-size:30px;
     cursor: pointer;
@@ -86,13 +104,13 @@ p {
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0px #f50202;
+        box-shadow: 0 0 0 0px #ffd1d1;
     }
     75% {
-        box-shadow: 0 0 0 0px #fa4a4a;
+        box-shadow: 0 0 0 0px #fdc3c3;
     }
-    100% {
-        box-shadow: 0 0 0 30px rgb(255, 0, 0);
+    80% {
+        box-shadow: 0 0 0 30px rgb(240, 150, 150);
     }
 }
 @keyframes flash {
@@ -133,10 +151,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4158d0;
+    background-color: white;
+    opacity: 70%;
     
     bottom: 0px;
-    height: 50px;
+    height: 70px;
     width: 100%;
     position: fixed;
 }
@@ -165,12 +184,39 @@ p {
 
 }
 
+.all-lyric-divs{
+    display:flex;
+    justify-content: space-around;
+}
+
 
 .ogLang {
-    overflow: scroll;
+    overflow-y: scroll;
+    height: 550px;
+    width: 500px;
+    opacity: 70%;
+    background-color: white;
+    border-radius:10px;
 }
 
 .translatedLang {
-    overflow:scroll;
+    overflow-y:scroll;
+    height: 550px;
+    width: 500px;
+    opacity: 70%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.lyrics{
+    font-size: 20px;
+    padding: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.currentlyplaying{
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
 
 }
